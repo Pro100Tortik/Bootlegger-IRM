@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 80de00b01714acf4aa663f2b3dd45260
+timeCreated: 1469283559
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167950
+  packageName: First Person View 3
+  packageVersion: 1.0b
+  assetPath: Assets/FirstPersonView/Source/Renderer/FPV_Renderer.cs
+  uploadId: 438558

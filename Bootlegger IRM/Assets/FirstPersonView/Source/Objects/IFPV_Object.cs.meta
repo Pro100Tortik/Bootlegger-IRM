@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: c4d1f2ad820f5c04eb7512ac57127e40
+timeCreated: 1442691067
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167950
+  packageName: First Person View 3
+  packageVersion: 1.0b
+  assetPath: Assets/FirstPersonView/Source/Objects/IFPV_Object.cs
+  uploadId: 438558

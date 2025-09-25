@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: fd453ef7c8123ec4ab3e7f8db1d7342f
+timeCreated: 1509316299
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167950
+  packageName: First Person View 3
+  packageVersion: 1.0b
+  assetPath: Assets/FirstPersonView/Source/Light/FPV_LightCommandBuffer.cs
+  uploadId: 438558

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8d647b87623e1fc4c89b4b4a4dc43189
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167950
+  packageName: First Person View 3
+  packageVersion: 1.0b
+  assetPath: Assets/FirstPersonView/ShaderGraph/Editor/FPVCustomNode.hlsl
+  uploadId: 438558

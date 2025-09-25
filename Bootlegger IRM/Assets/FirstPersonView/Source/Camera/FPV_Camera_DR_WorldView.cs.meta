@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b487933df0a6b3b4da8a870669e358b6
+timeCreated: 1468969843
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 3000
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167950
+  packageName: First Person View 3
+  packageVersion: 1.0b
+  assetPath: Assets/FirstPersonView/Source/Camera/FPV_Camera_DR_WorldView.cs
+  uploadId: 438558

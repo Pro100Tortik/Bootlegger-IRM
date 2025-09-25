@@ -1,0 +1,11 @@
+
+//UNITY_SHADER_NO_UPGRADE
+
+#ifndef FPV_INSTANCING_OVERRIDE_INCLUDED
+#define FPV_INSTANCING_OVERRIDE_INCLUDED
+
+#if defined(BOOLEAN_FIRSTPERSONVIEW_ON) || defined(BOOLEAN_FPV_ALWAYS_ON)
+unity_MatrixMVP_Instanced = mul(UNITY_MATRIX_VP, unity_ObjectToWorld);
+#endif
+
+#endif

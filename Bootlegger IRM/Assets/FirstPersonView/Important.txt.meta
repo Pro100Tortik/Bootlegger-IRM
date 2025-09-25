@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c86b674c94c34d543bdd3bbd5fb6d9c0
+timeCreated: 1469366946
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167950
+  packageName: First Person View 3
+  packageVersion: 1.0b
+  assetPath: Assets/FirstPersonView/Important.txt
+  uploadId: 438558

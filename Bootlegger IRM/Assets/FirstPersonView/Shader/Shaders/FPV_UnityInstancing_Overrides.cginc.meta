@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: e326a54d8cd4a10468ee4c888e0d19e2
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167950
+  packageName: First Person View 3
+  packageVersion: 1.0b
+  assetPath: Assets/FirstPersonView/Shader/Shaders/FPV_UnityInstancing_Overrides.cginc
+  uploadId: 438558

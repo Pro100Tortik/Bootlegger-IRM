@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 27421fd0e96544a4eb489cb87fd27589
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167950
+  packageName: First Person View 3
+  packageVersion: 1.0b
+  assetPath: Assets/FirstPersonView/ShaderGraph/FPVUtility.cginc
+  uploadId: 438558

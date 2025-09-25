@@ -1,0 +1,3 @@
+Important!
+For Default Renderer, when updating to a new version of Unity, you'll need to go through the setup and prepare FPV for that new version
+Make sure to re-import/compile the first person shaders every time this change happens

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 9d78418bb751ace4b889f480b5722424
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 167950
+  packageName: First Person View 3
+  packageVersion: 1.0b
+  assetPath: Assets/FirstPersonView/Shader/CustomInternal/FPV_DepthNormalsTexture_Overrides.cginc
+  uploadId: 438558
