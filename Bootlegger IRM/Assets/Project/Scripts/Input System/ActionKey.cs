@@ -16,6 +16,7 @@ namespace Bootlegger
         // Movement
         Jump,
         Crouch,
+        Run,
 
         // Other
         Interact

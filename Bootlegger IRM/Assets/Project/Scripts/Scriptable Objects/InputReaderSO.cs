@@ -61,6 +61,7 @@ namespace Bootlegger
                 // Gameplay actions
                 { ActionKey.Crouch, gameplayMap.FindAction("Crouch") },
                 { ActionKey.Jump, gameplayMap.FindAction("Jump") },
+                { ActionKey.Run, gameplayMap.FindAction("Run") },
                 { ActionKey.Interact, gameplayMap.FindAction("Interact") },
 
                 // Menu actions
