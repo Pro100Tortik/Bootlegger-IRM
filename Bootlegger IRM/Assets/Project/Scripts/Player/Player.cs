@@ -39,19 +39,19 @@ namespace Bootlegger
             };
             interactor.UpdateInput(interactorInput);
 
-            InventoryInput inventoryInput = new()
-            {
-                Slot1 = InputManager.GetKeyDown(ActionKey.Slot1),
-                Slot2 = InputManager.GetKeyDown(ActionKey.Slot2),
-                Slot3 = InputManager.GetKeyDown(ActionKey.Slot3),
-                Slot4 = InputManager.GetKeyDown(ActionKey.Slot4),
-                Slot5 = InputManager.GetKeyDown(ActionKey.Slot5),
-                Slot6 = InputManager.GetKeyDown(ActionKey.Slot6),
-                Slot7 = InputManager.GetKeyDown(ActionKey.Slot7),
-                Slot8 = InputManager.GetKeyDown(ActionKey.Slot8),
-                Slot9 = InputManager.GetKeyDown(ActionKey.Slot9),
-            };
-            inventory.UpdateInput(inventoryInput);
+            //InventoryInput inventoryInput = new()
+            //{
+            //    Slot1 = InputManager.GetKeyDown(ActionKey.Slot1),
+            //    Slot2 = InputManager.GetKeyDown(ActionKey.Slot2),
+            //    Slot3 = InputManager.GetKeyDown(ActionKey.Slot3),
+            //    Slot4 = InputManager.GetKeyDown(ActionKey.Slot4),
+            //    Slot5 = InputManager.GetKeyDown(ActionKey.Slot5),
+            //    Slot6 = InputManager.GetKeyDown(ActionKey.Slot6),
+            //    Slot7 = InputManager.GetKeyDown(ActionKey.Slot7),
+            //    Slot8 = InputManager.GetKeyDown(ActionKey.Slot8),
+            //    Slot9 = InputManager.GetKeyDown(ActionKey.Slot9),
+            //};
+            //inventory.UpdateInput(inventoryInput);
         }
     }
 }

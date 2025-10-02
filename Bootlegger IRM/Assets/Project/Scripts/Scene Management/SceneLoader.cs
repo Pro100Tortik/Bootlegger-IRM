@@ -36,6 +36,7 @@ namespace Bootlegger
         private void Start()
         {
             fadeCanvasGroup.alpha = 0f;
+            fadeCanvasGroup.blocksRaycasts = false;
             IsSceneLoading = false;
 
             // Not Bootstrap and not Main Menu, load back on what scene we was
@@ -190,6 +191,8 @@ namespace Bootlegger
 
                 yield return null;
             }
+
+            fadeCanvasGroup.blocksRaycasts = targetValue > 0f;
 
             fadeCanvasGroup.alpha = targetValue;
 
