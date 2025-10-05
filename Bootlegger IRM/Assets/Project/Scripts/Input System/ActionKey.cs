@@ -18,7 +18,10 @@ namespace Bootlegger
         Crouch,
         Run,
 
+        PrimaryAttack,
+
         // Other
-        Interact
+        Interact,
+        Cancel
     }
 }

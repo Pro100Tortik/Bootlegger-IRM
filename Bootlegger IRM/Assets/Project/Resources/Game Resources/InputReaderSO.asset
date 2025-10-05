@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: InputReaderSO
   m_EditorClassIdentifier: 
   inputAsset: {fileID: -944628639613478452, guid: 7daa9f889c9283f438f964dd229231a0, type: 3}
-  gameplayMapName: Walk
+  gameplayMapName: Gameplay
   menuMapName: Menu

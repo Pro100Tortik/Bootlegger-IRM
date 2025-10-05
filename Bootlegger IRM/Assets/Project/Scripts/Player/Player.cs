@@ -1,27 +1,62 @@
+using Unity.Cinemachine;
 using UnityEngine;
 
 namespace Bootlegger
 {
     public class Player : SaveableBehaviour, IInteractor
     {
-        [Header("Player Systems")]
-        [SerializeField] private HeadRotator headRotator;
+        [Header("Player Systems (Exploration)")]
+        [SerializeField] private Transform cameraTarget;
+        [SerializeField] private CinemachineCamera playerCamera;
         [SerializeField] private MovementController movementController;
+        [SerializeField] private HeadRotator headRotator;
         [SerializeField] private PlayerInteractor interactor;
         [SerializeField] private Inventory inventory;
+
+        [Header("Player Systems (Minigames)")]
+        [SerializeField] private DragManager dragManager;
+        private GameManager _gameManager;
 
         private void Awake()
         {
             interactor.Setup(this);
+            dragManager.Setup(this);
+
+            GameManager.EnableCursor = false;
+        }
+
+        protected override void Start()
+        {
+            base.Start();
+            _gameManager = GameManager.Instance;
         }
 
         protected override void OnUpdate()
+        {
+            switch (_gameManager.CurrentGameMode)
+            {
+                case GameMode.Exploration:
+                    UpdateExplorationSystems(true);
+                    break;
+
+                case GameMode.Minigame:
+                    UpdateMinigameSystems();
+                    UpdateExplorationSystems(false);
+                    break;
+
+                case GameMode.Trading:
+                    break;
+            }
+        }
+
+        // Movement, interactions
+        private void UpdateExplorationSystems(bool enabled)
         {
             CameraInput cameraInput = new()
             {
                 LookInput = InputManager.GetLookAxis() * 0.13f
             };
-            headRotator.UpdateInput(cameraInput);
+            headRotator.UpdateInput(enabled ? cameraInput : default);
 
             ControllerInput controllerInput = new()
             {
@@ -30,14 +65,14 @@ namespace Bootlegger
                 Jump = InputManager.GetKey(InputType.Hold, ActionKey.Jump),
                 Run = InputManager.GetKey(InputType.Hold, ActionKey.Run)
             };
-            movementController.UpdateInput(controllerInput);
+            movementController.UpdateInput(enabled ? controllerInput : default);
 
             InteractorInput interactorInput = new()
             {
                 Interact = InputManager.GetKey(InputType.Hold, ActionKey.Interact),
-                Throw = InputManager.GetKey(InputType.Hold, ActionKey.Interact)
+                Throw = InputManager.GetKey(InputType.Hold, ActionKey.PrimaryAttack)
             };
-            interactor.UpdateInput(interactorInput);
+            interactor.UpdateInput(enabled ? interactorInput : default);
 
             //InventoryInput inventoryInput = new()
             //{
@@ -52,6 +87,29 @@ namespace Bootlegger
             //    Slot9 = InputManager.GetKeyDown(ActionKey.Slot9),
             //};
             //inventory.UpdateInput(inventoryInput);
+        }
+
+        // Some interactions
+        private void UpdateMinigameSystems()
+        {
+            dragManager.UpdateInput(InputManager.GetKey(InputType.Hold, ActionKey.PrimaryAttack));
+        }
+
+        public void MinigameStarted(Vector3 position, Quaternion rotation)
+        {
+            GameManager.EnableCursor = true;
+
+            //playerCamera.enabled = false;
+        }
+
+        public void MinigameStopped(Vector3 position, Quaternion rotation)
+        {
+            GameManager.EnableCursor = false;
+
+            playerCamera.enabled = true;
+
+            movementController.SetPosition(position, true);
+            headRotator.SetLookDirection(rotation.eulerAngles);
         }
     }
 }

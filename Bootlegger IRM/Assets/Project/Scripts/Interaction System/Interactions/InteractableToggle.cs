@@ -4,7 +4,7 @@ namespace Bootlegger
 {
     public class InteractableToggle : InteractionBase
     {
-        protected override void OnInteract()
+        protected override void OnInteract(IInteractor interactor)
         {
 
         }

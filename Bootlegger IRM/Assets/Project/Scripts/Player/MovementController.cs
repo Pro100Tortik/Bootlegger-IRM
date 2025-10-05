@@ -732,9 +732,12 @@ namespace Bootlegger
             motor.BaseVelocity = velocity;
         }
 
-        public void SetPosition(Vector3 position)
+        public void SetPosition(Vector3 position, bool teleport)
         {
-            motor.SetPosition(position);
+            if (teleport)
+                motor.SetPosition(position);
+            else
+                motor.MoveCharacter(position);
         }
 
         public void SetGravityModifier(float gravityModifier)

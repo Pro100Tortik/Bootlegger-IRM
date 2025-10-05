@@ -15,6 +15,7 @@ namespace Bootlegger
         [SerializeField] private float sprintBobAmount = 0.05f;
         [SerializeField] private float xOffsetMagnitude = 4f;
         [SerializeField] private float yOffsetMagnitude = 1f;
+        [SerializeField] private float rotationDegrees = 2f;
         private Transform _transform;
         private float _timer = Mathf.PI / 2;
         private float _bobSpeed;
@@ -61,6 +62,9 @@ namespace Bootlegger
                     Mathf.Sin(_timer * 2) * _bobAmount * yOffsetMagnitude,
                     0
                 );
+
+                transform.localRotation = Quaternion.Euler(Mathf.Sin(_timer * 2) * _bobAmount * rotationDegrees
+                    , transform.localRotation.y, transform.localRotation.z);
             }
             else
             {
@@ -72,6 +76,9 @@ namespace Bootlegger
                     Mathf.Sin(_timer * 2) * _bobAmount * yOffsetMagnitude * idleMultiplier,
                     0
                 );
+
+                transform.localRotation = Quaternion.Euler(Mathf.Sin(_timer * 2) * normalBobAmount * rotationDegrees
+                    , transform.localRotation.y, transform.localRotation.z);
             }
 
             // Плавно интерполируем к целевой позиции

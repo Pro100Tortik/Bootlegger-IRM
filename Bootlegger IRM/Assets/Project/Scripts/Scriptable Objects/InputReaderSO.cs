@@ -63,6 +63,17 @@ namespace Bootlegger
                 { ActionKey.Jump, gameplayMap.FindAction("Jump") },
                 { ActionKey.Run, gameplayMap.FindAction("Run") },
                 { ActionKey.Interact, gameplayMap.FindAction("Interact") },
+                { ActionKey.Cancel, gameplayMap.FindAction("Cancel") },
+                { ActionKey.PrimaryAttack, gameplayMap.FindAction("PrimaryAttack") },
+                { ActionKey.Slot1, gameplayMap.FindAction("Slot1") },
+                { ActionKey.Slot2, gameplayMap.FindAction("Slot2") },
+                { ActionKey.Slot3, gameplayMap.FindAction("Slot3") },
+                { ActionKey.Slot4, gameplayMap.FindAction("Slot4") },
+                { ActionKey.Slot5, gameplayMap.FindAction("Slot5") },
+                { ActionKey.Slot6, gameplayMap.FindAction("Slot6") },
+                { ActionKey.Slot7, gameplayMap.FindAction("Slot7") },
+                { ActionKey.Slot8, gameplayMap.FindAction("Slot8") },
+                { ActionKey.Slot9, gameplayMap.FindAction("Slot9") },
 
                 // Menu actions
                 //{ ActionKey.Pause, menuMap.FindAction("Pause") },

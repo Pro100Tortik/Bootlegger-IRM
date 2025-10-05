@@ -44,7 +44,7 @@ namespace Bootlegger
                 return;
 
             ToggleState();
-            OnInteract();
+            OnInteract(interactor);
             alreadyInteracted = true;
         }
 
@@ -53,6 +53,6 @@ namespace Bootlegger
             IsOn = !IsOn;
         }
 
-        protected abstract void OnInteract();
+        protected abstract void OnInteract(IInteractor interactor);
     }
 }

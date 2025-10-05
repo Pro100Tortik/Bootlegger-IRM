@@ -118,7 +118,6 @@ namespace Bootlegger
             }
 
             SelectedInteractable.Value = interactable;
-
             SelectedInteractable.Value.Select();
         }
 
@@ -136,8 +135,7 @@ namespace Bootlegger
             // Out of reach, drop
             if (Vector3.Distance(_grabbable.Transform.position, playerCamera.position) > maxCarryRange)
             {
-                _grabbable.Throw(Vector3.zero);
-                _grabbable = null;
+                ReleaseGrabbable();
                 return;
             }
 
@@ -150,13 +148,34 @@ namespace Bootlegger
             if (_grabbable == null)
                 return;
 
-            if (!_requestedThrow || _alreadyInteracted)
+            if (_requestedInteraction && !_alreadyInteracted)
+            {
+                _alreadyInteracted = true;
+                ReleaseGrabbable();
                 return;
+            }
 
-            _alreadyThrowed = true;
+            if (_requestedThrow && !_alreadyThrowed)
+            {
+                _alreadyThrowed = true;
+                ThrowGrabbable();
+                return;
+            }
+        }
+
+        private void ReleaseGrabbable()
+        {
+            if (_grabbable == null) return;
+
+            _grabbable.Throw(Vector3.zero);
+            _grabbable = null;
+        }
+
+        private void ThrowGrabbable()
+        {
+            if (_grabbable == null) return;
 
             _grabbable.Throw(playerCamera.forward * throwForce);
-            _grabbable.Select();
             _grabbable = null;
         }
 

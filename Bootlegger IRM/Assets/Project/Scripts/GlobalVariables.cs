@@ -1,4 +1,3 @@
-using FirstPersonView;
 using UnityEngine;
 
 namespace Bootlegger
@@ -28,8 +27,8 @@ namespace Bootlegger
         public static float duckMultiplier = 0.20f;
         public static float checkRadius = 0.45f;
         public static float checkHeight = 0.65f;
-        public static float playerHeight = 2.0f;
-        public static float crouchHeight = 1.1f;
+        public static float playerHeight = 1.8f;
+        public static float crouchHeight = 0.9f;
         public static float crouchTransitionSpeed = 4.0f;
 
         // FOV

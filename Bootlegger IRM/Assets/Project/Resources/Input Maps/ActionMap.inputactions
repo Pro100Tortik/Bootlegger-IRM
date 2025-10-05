@@ -3,7 +3,7 @@
     "name": "ActionMap",
     "maps": [
         {
-            "name": "Walk",
+            "name": "Gameplay",
             "id": "b7bc691d-0b66-4a47-a2b0-4167a31bef4f",
             "actions": [
                 {
@@ -136,6 +136,24 @@
                     "name": "Run",
                     "type": "Button",
                     "id": "84743fec-1c4d-443a-bf05-afdbdb4cb77b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PrimaryAttack",
+                    "type": "Button",
+                    "id": "df52b46d-9206-45f4-b211-99dfc629c3cf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Cancel",
+                    "type": "Button",
+                    "id": "ac1878a5-200a-4751-8121-85dd2452b7ba",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -351,14 +369,30 @@
                     "action": "Run",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "db79d77f-4cb9-4f56-b5fe-e8fc3e43cef9",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "PrimaryAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "85598f1f-ccaf-4bba-876b-6bccee9aa4ac",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
-        },
-        {
-            "name": "Cooking",
-            "id": "03f04723-0fd7-4ec7-bf1d-ff6b1342f751",
-            "actions": [],
-            "bindings": []
         },
         {
             "name": "Menu",
